@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var students = ViewData["student"] as List<StudentModel>;
+}
+
+
+<div class="text-center">
+     <div>Student List</div>
+     <table>
+         <tr>
+             <th>Roll NO.</th>
+             <th>Name</th>
+             <th>Gender</th>
+             <th>Stanadard</th>
+         </tr>
+         
+            @foreach (var std in students)
+            {
+               <tr>
+                <td>@std.RollNo</td>
+                <td>@std.Name</td>
+                <td>@std.Gender</td>
+                <td>@std.Standard</td>
+               </tr> 
+            }
+         
+     </table>
+</div>
